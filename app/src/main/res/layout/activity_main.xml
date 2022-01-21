@@ -58,6 +58,7 @@
         android:layout_marginTop="80sp"
         android:textSize="20sp"
         android:hint="100이하의 숫자를 입력하시오!"
+        android:background="#66FFFFFF"
         android:gravity="center"
         android:id="@+id/edt1"
         android:digits="0123456789"
