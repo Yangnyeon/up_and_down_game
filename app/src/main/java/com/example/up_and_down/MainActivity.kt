@@ -2,6 +2,7 @@ package com.example.up_and_down
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -43,6 +44,17 @@ class MainActivity : AppCompatActivity() {
             }catch (e : Exception) {
 
             }
+
+        var refresh = findViewById<SwipeRefreshLayout>(R.id.updown)
+        refresh.setOnRefreshListener {
+
+            txt1.setText("")
+            shuffle = random.nextInt(100) + 1
+            number = shuffle //랜덤숫자
+            i = 0
+            refresh.isRefreshing = false
+
+        }
         }
 
     }
