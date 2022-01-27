@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         var refresh = findViewById<SwipeRefreshLayout>(R.id.updown)
         refresh.setOnRefreshListener {
 
-            txt1.setText("")
+            txt1.setText("새로고침 되었습니다!")
             shuffle = random.nextInt(100) + 1
             number = shuffle //랜덤숫자
             i = 0
